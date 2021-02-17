@@ -263,7 +263,6 @@ while True:
 			print("Downloadind and uploading images...")
 			# Width used to resize images
 			basewidth = 600
-			#i = 0
 			# Array used to save the paths of the saved images
 			imagesArray = []
 			# Original images 
@@ -279,14 +278,12 @@ while True:
 					img.save('images/' + newsSites[i] +'Original.jpg','JPEG',optimize=True,quality=90)
 					# Add path of saved image to images array
 					imagesArray.append('images/' + newsSites[i] +'Original.jpg')
-					#i = i + 1
 				except Exception as e:
 					print('Exception: ')
 					print(e)
 					img = Image.open('images/notAvailable.jpg').convert('RGB')
 					img.save('images/' + newsSites[i] +'Original.jpg','JPEG')
 					imagesArray.append('images/' + newsSites[i] +'Original.jpg')
-					#i = i + 1
 			# Build scp command to upload images to server from the saved images paths
 			commandToRun = 'scp ' + imagesArray[0] + ' ' + imagesArray[1] + ' ' + imagesArray[2] + ' ' + imagesArray[3] + ' ' + imagesArray[4] + ' ' + imagesArray[5] + ' ' + 'stevenzv7@scanews.online:"~/scanews.online/images"'
 			while True:
@@ -298,7 +295,6 @@ while True:
 					print("Could not connect to server, retrying in 5sec...")
 					time.sleep(5)
 					pass		
-			#i = 0
 			# Image array is emptied to now download and upload keyword images
 			imagesArray = []
 			# Keyword images (See Original images above for documentation)
@@ -310,15 +306,13 @@ while True:
 					hsize = int((float(img.size[1])*float(wpercent)))
 					img = img.resize((basewidth,hsize), Image.ANTIALIAS)
 					img.save('images/' + newsSites[i] +'Keyword.jpg','JPEG',optimize=True,quality=90)
-					imagesArray.append('images/' + newsSites[i] +'Keyword.jpg')	
-					#i = i + 1				
+					imagesArray.append('images/' + newsSites[i] +'Keyword.jpg')			
 				except Exception as e:
 					print('Exception: ')
 					print(e)
 					img = Image.open('images/notAvailable.jpg').convert('RGB')
 					img.save('images/' + newsSites[i] +'Keyword.jpg','JPEG')
 					imagesArray.append('images/' + newsSites[i] +'Keyword.jpg')
-					#i = i + 1
 			commandToRun = 'scp ' + imagesArray[0] + ' ' + imagesArray[1] + ' ' + imagesArray[2] + ' ' + imagesArray[3] + ' ' + imagesArray[4] + ' ' + imagesArray[5] + ' ' + 'stevenzv7@scanews.online:"~/scanews.online/images"'
 			while True:
 				try:
