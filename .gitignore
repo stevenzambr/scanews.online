@@ -1,8 +1,6 @@
-
 .DS_Store
 Front-End/css/.Rhistory
 Front-End/js/.Rhistory
-
 Front-End/js/bootstrap.bundle.js
 Back-End/images/cbsKeyword.jpg
 Back-End/images/cbsOriginal.jpg
@@ -16,3 +14,11 @@ Back-End/images/nyTimesKeyword.jpg
 Back-End/images/nyTimesOriginal.jpg
 Back-End/images/yahooKeyword.jpg
 Back-End/images/yahooOriginal.jpg
+Back-End/nyTimesApiKey.txt
+Back-End/theGuardianApiKey.txt
+Back-End/dataNyTimes.json
+Back-End/dataTheGuardian.json
+Back-End/currentsApiKey.txt
+Back-End/dataCurrentsLatestNews.json
+Back-End/nyTimesData_2020_12.json
+Back-End/nyTimesData_2021_1.json
