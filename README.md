@@ -1,2 +1,2 @@
 # scanews.online
-Scanews is a news headlines web scraping website
+Scanews is a news headlines website
