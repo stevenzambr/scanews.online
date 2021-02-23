@@ -1,7 +1,7 @@
 import requests
 import json
 
-# THE GUARDIAN  (Images not available with free API)
+# THE GUARDIAN  (Images not available with free API. Use for data analysis?)
 
 # Read locally stored private The Guardian Api Key
 with open('../apiKeys.json') as f:

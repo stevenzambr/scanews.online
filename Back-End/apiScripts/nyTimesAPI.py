@@ -8,7 +8,7 @@ with open('../apiKeys.json') as f:
   nyTimesApiKey = json.load(f)["NyTimes"]
 
 
-# NyTimes API requests are capped 4000 requests per day and 10 requests per minute
+# NyTimes API requests are capped at 4000 requests per day and 10 requests per minute
 data = requests.get('https://api.nytimes.com/svc/topstories/v2/home.json?api-key='+nyTimesApiKey).json()
 
 # Save data in json file
